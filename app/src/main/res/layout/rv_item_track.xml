@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+   <RelativeLayout
+       android:id="@+id/rlListItemRoot"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <ImageView
+           android:id="@+id/ivTrack"
+           android:layout_width="100dp"
+           android:layout_height="100dp">
+       </ImageView>
+
+       <TextView
+           android:id="@+id/tvTrackTitle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@id/ivTrack"
+           android:layout_toEndOf="@id/ivTrack"
+           tools:text="Title of Track"
+           />
+
+   </RelativeLayout>
+
+</layout>

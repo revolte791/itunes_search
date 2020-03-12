@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="albumDetailsViewModel"
+            type="com.hwx.itunessearchbox.viewmodel.AlbumDetailsViewModel" />
+    </data>
+
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootHomeLayout"
+        tools:context=".feature.home.ui.fragment.HomeFragment">
+
+        <RelativeLayout
+            android:id="@+id/llAlbumDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bd_below_shadow"
+            >
+            <TextView
+                android:id="@+id/tvAlbumTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                tools:text="Title"
+                />
+            <TextView
+                android:id="@+id/tvAlbumCountry"
+                android:layout_below="@id/tvAlbumTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                tools:text="Country"
+                />
+            <TextView
+                android:id="@+id/tvAlbumReleaseDate"
+                android:layout_below="@id/tvAlbumCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                tools:text="ReleaseDate"
+                />
+            <TextView
+                android:id="@+id/tvAlbumGenre"
+                android:layout_below="@id/tvAlbumReleaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                tools:text="Genre"
+                />
+            <ImageView
+                android:id="@+id/ivAlbumImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAlbumsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/llAlbumDetails"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </RelativeLayout>
+
+</layout>
